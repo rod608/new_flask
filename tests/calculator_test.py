@@ -1,7 +1,6 @@
 """Testing the Calculator"""
 from calculator import Calculator
 
-
 def test_calculator_is_instance():
     """Testing the Calculator"""
     calculator = Calculator()
@@ -29,7 +28,8 @@ def test_calculator_add_method():
     calculator = Calculator()
     assert calculator.add(1) == 1
 
+
 def test_calculator_subtract_method():
     """Testing the Calculator Subtract"""
     calculator = Calculator()
-    assert calculator.subtract(1) == -1
+    assert calculator.subtract(1, 1) == -1
