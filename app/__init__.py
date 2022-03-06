@@ -11,4 +11,8 @@ def create_app():
     def index():
         return render_template('index.html')
 
+    @app.route("/git")
+    def gitpage():
+        return render_template('git.html')
+
     return app

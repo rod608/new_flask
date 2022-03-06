@@ -8,66 +8,154 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- My CSS -->
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+        <title>{% block title %}Rod's Mods - {% endblock %}Homepage {{ Rodney }}</title>
     {% endblock %}
 
 </head>
 <body>
+
+<!-- Header Section -->
+<header class="mb-4">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light shadow">
+        <div class="container">
+            <!-- Branding & Mobile Toggler -->
+            <a class="navbar-brand" href="#">Rod's Mods</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Nav Items -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/git" class="nav-link">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Docker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Flask</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">CI/CD</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+</header>
+
 <div class="container">
-
-    <!-- Header Section -->
-    <div class="row">
-        <header class="mb-5">
-
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-                <div class="container-fluid">
-                    <!-- Branding & Mobile Toggler -->
-                    <a class="navbar-brand" href="index.html">Rod's Mods</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!-- Nav Items -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Git</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Docker</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Flask</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">CI/CD</a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                </div>
-            </nav>
-
-        </header>
-    </div>
-
     <!-- Carousel Section -->
-    <div class="row">
-        Hi, World!
+    <div class="row mb-4">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
+
+            <!-- Indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div>
+
+            <!-- Images -->
+              <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                  <img src="../static/images/carousel_git.jpg" class="d-block w-100" alt="Git Image">
+                </div>
+                <div class="carousel-item rounded">
+                  <img src="../static/images/carousel_holder.jpg" class="d-block w-100" alt="Docker Image">
+                </div>
+                <div class="carousel-item rounded">
+                  <img src="../static/images/carousel_holder.jpg" class="d-block w-100" alt="Python & Flask Image">
+                </div>
+                  <div class="carousel-item rounded">
+                  <img src="../static/images/carousel_holder.jpg" class="d-block w-100" alt="Continuous Integration and Deployment Image">
+                </div>
+              </div>
+
+            <!-- Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+
+        </div>
     </div>
+
+    <!-- Card Section -->
+    <div class="row row-cols-1 row-cols-md-4 mb-4">
+
+        <div class="col">
+            <div class="card mx-auto" style="width: 18rem;">
+              <img src="../static/images/cards_holder.jpg" class="card-img-top" alt="2nd card">
+              <div class="card-body">
+                <h5 class="card-title">Git</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/git" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card mx-auto" style="width: 18rem;">
+              <img src="../static/images/cards_holder.jpg" class="card-img-top" alt="2nd card">
+              <div class="card-body">
+                <h5 class="card-title">Docker</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/docker" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card mx-auto" style="width: 18rem;">
+              <img src="../static/images/cards_holder.jpg" class="card-img-top" alt="3rd card">
+              <div class="card-body">
+                <h5 class="card-title">Python & Flask</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/flask" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card mx-auto" style="width: 18rem;">
+              <img src="../static/images/cards_holder.jpg" class="card-img-top" alt="4th card">
+              <div class="card-body">
+                <h5 class="card-title">Continuous Integration/Deployment</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/cicd" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
 
 </div>
 
-<!-- Bootstrap Option 2: Separate Popper and Bootstrap JS -->
+<!-- Bootstrap Scripts: Separate Popper and Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
-
+<!-- Custom Scripts -->
 <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
 </body>

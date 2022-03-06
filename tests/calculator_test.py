@@ -4,9 +4,8 @@ from calculator import Calculator
 
 def test_calculator_add_method():
     """Testing the Calculator Add"""
-    calculator = Calculator()
     test_tuple = (1, 1)
-    assert calculator.add(test_tuple) == 2
+    assert Calculator.add(test_tuple) == 2
 
 
 def test_calculator_subtract_method():
