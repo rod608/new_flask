@@ -15,4 +15,16 @@ def create_app():
     def gitpage():
         return render_template('git.html')
 
+    @app.route("/docker")
+    def dockerpage():
+        return render_template('docker.html')
+
+    @app.route("/flask")
+    def flaskpage():
+        return render_template('flask.html')
+
+    @app.route("/cicd")
+    def cicdpage():
+        return render_template('cicd.html')
+
     return app
