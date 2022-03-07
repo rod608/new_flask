@@ -42,11 +42,6 @@ h3 {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-p, section a {
+p, section a, ol li {
     font-family: 'Source Sans Pro', sans-serif;
-}
-
-section a {
-    color: cornflowerblue;
-    text-decoration: none;
 }

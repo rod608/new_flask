@@ -15,7 +15,7 @@
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-        <title>{% block title %}Rod's Mods - {% endblock %}Python & Flask {{ Rodney }}</title>
+        <title>{% block title %}Rod's Mods - {% endblock %}Python & Flask {{ name }}</title>
     {% endblock %}
 </head>
 <body>
@@ -72,22 +72,41 @@
     <section id="pytest">
         <h3 class="mb-0 pb-0">PyTests</h3>
 
-            <a href="#" target="_blank">GitHub Docs: Commits</a>
+            <a href="https://docs.pytest.org/en/7.0.x/getting-started.html#get-started" target="_blank">PyTest Docs: Get Started</a>
 
-            <p class="mt-3"></p>
+            <p class="mt-3">If you've been programming for a while, you've heard of Unit Testing. Unit Testing is arguably more important than the program itself;
+                you do this in order to ensure your program/application is behaving as it should. This, of course, is important in both Python & Web Applications.
+                PyTest is a framework that makes Unit Testing easy. As the name states, it's main use if testing the functionality and behavior of code.
+            </p>
 
-            <p></p>
+            <p class="text-decoration-underline">Getting Started</p>
+            <ol>
+                <li>Run the following in your project's command line: pip install -U pytest</li>
+                <li>Make sure it's installed by running... pytest --version</li>
+                <li>Create a test_{customName}.py file and add some functions with assertions in it.</li>
+                <li>Run pytest in the project's command line and you'll see whether they pass or fail.</li>
+            </ol>
+
         <hr class="my-3">
     </section>
-    <!-- Simple Page Creation -->
+    <!-- Simple Page Testing -->
     <section id="simple_pages">
-        <h3 class="mb-0 pb-0">Simple Pages</h3>
+        <h3 class="mb-0 pb-0">Testing Simple Pages</h3>
 
-            <a href="#" target="_blank">GitHub Docs: Commits</a>
+            <a href="https://flask.palletsprojects.com/en/2.0.x/testing/" target="_blank">Flask Documentation: Testing Applications</a>
 
-            <p class="mt-3"></p>
+            <p class="mt-3">Of course, testing Flask Web Applications defers from testing Python command-line applications. There's an
+                entirely different process, but some steps are definitely shared.
+            </p>
 
-            <p></p>
+            <p class="text-decoration-underline">How-To</p>
+            <ol>
+                <li>Be sure to import both Flask and </li>
+                <li>Make sure it's installed by running... pytest --version</li>
+                <li>Create a test_{customName}.py file and add some functions with assertions in it.</li>
+                <li>Run pytest in the project's command line and you'll see whether they pass or fail.</li>
+            </ol>
+
         <hr class="my-3">
     </section>
     <!-- Blueprint -->
