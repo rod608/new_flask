@@ -4,9 +4,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Icons -->
 
     <!-- My CSS -->
     {% block head %}
@@ -18,34 +21,46 @@
 </head>
 <body>
 
-<!-- Header Section -->
-<header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-light shadow">
+<header class="bg-dark">
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark shadow">
         <div class="container-fluid">
+
             <!-- Branding & Mobile Toggler -->
-            <a class="navbar-brand" href="#">Rod's Mods</a>
+            <a class="navbar-brand" href="/">
+                Rod's Mods
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <!-- Nav Items -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
                 <ul class="navbar-nav ms-auto">
+
                     <li class="nav-item">
                         <a href="/git" class="nav-link">Git</a>
                     </li>
+
                     <li class="nav-item">
                         <a href="/docker" class="nav-link">Docker</a>
                     </li>
+
                     <li class="nav-item">
                         <a href="/flask" class="nav-link">Flask</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/cicd" class="nav-link">CI/CD</a>
-                    </li>
-                </ul>
 
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Continuous I/D
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/cicd">Integration</a></li>
+                        <li><a class="dropdown-item" href="/cicd">Deployment</a></li>
+                      </ul>
+                    </li>
+
+                </ul>
             </div>
 
         </div>
@@ -53,7 +68,7 @@
 </header>
 
 <!-- Main Section -->
-<main>
+<main class="mb-5">
     <!-- Carousel -->
     <div class="row mb-4">
         <div id="mainCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
@@ -71,32 +86,29 @@
 
                 <div class="carousel-item rounded active" style="height: 30rem;">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>Git & GitHub</h5>
+                    <p>Learn about Repositories, Commits, Branches, Merging, & Tags.</p>
                   </div>
                 </div>
 
                 <div class="carousel-item rounded" style="height: 30rem;">
-                  <img src="../static/images/carousel_holder.jpg" class="d-block w-100" alt="Docker Image">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>Docker</h5>
+                    <p>Learn about Containers, Images, Terminal Commands, and starting a project via the terminal.</p>
                   </div>
                 </div>
 
                 <div class="carousel-item rounded" style="height: 30rem;">
-                  <img src="../static/images/carousel_holder.jpg" class="d-block w-100" alt="Python & Flask Image">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>Python & Flask</h5>
+                    <p>Learn about PyTest, creating simple pages, Flask Blueprint, and Flask Testing.</p>
                   </div>
                 </div>
 
                 <div class="carousel-item rounded" style="height: 30rem;">
-                  <img src="../static/images/carousel_holder.jpg" class="d-block w-100" alt="Continuous Integration and Deployment Image">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Fourth slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>Continuous Integration & Deployment</h5>
+                    <p>Learn about GitHub Actions, reviewing code via a Development Server before Merging, and deploying to a Production Server.</p>
                   </div>
                 </div>
 
@@ -118,60 +130,63 @@
 
 <!-- Cards -->
 <div class="container">
-    <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mb-4">
+    <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 mb-4">
 
         <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-              <img src="../static/images/cards_holder.jpg" class="card-img-top" alt="2nd card">
+            <div class="card mx-auto shadow">
+              <img src="../static/images/cards_git.png" class="card-img-top" alt="Git Card Image">
               <div class="card-body">
                 <h5 class="card-title">Git</h5>
-                <p class="card-text">Learn about Git & Github!</p>
-                <a href="/git" class="btn btn-primary">Learn</a>
+                <p class="card-text">Learn about Git and Github!</p>
+                <a href="/git" class="btn btn-success shadow-sm">Learn</a>
               </div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-              <img src="../static/images/cards_holder.jpg" class="card-img-top" alt="2nd card">
+            <div class="card mx-auto shadow">
+              <img src="../static/images/cards_docker.png" class="card-img-top" alt="Docker Card Image">
               <div class="card-body">
                 <h5 class="card-title">Docker</h5>
                 <p class="card-text">Learn about Docker!</p>
-                <a href="/docker" class="btn btn-primary">Learn</a>
+                <a href="/docker" class="btn btn-success shadow-sm">Learn</a>
               </div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-              <img src="../static/images/cards_holder.jpg" class="card-img-top" alt="3rd card">
+            <div class="card mx-auto shadow">
+              <img src="../static/images/cards_python.png" class="card-img-top" alt="Python Card Image">
               <div class="card-body">
                 <h5 class="card-title">Python & Flask</h5>
-                <p class="card-text">Learn about Python & Flask!</p>
-                <a href="/flask" class="btn btn-primary">Learn</a>
+                <p class="card-text">Learn about Python and Flask!</p>
+                <a href="/flask" class="btn btn-success shadow-sm">Learn</a>
               </div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card mx-auto" style="width: 18rem;">
-              <img src="../static/images/cards_holder.jpg" class="card-img-top" alt="4th card">
+            <div class="card mx-auto shadow">
+              <img src="../static/images/cards_cicd.png" class="card-img-top" alt="Continuous Integration and Deployment Card Image">
               <div class="card-body">
                 <h5 class="card-title">Continuous I/D</h5>
-                <p class="card-text">Learn about Continuous Integration & Deployment!</p>
-                <a href="/cicd" class="btn btn-primary">Learn</a>
+                <p class="card-text">Learn about GitHub Actions!</p>
+                <a href="/cicd" class="btn btn-success shadow-sm">Learn</a>
               </div>
             </div>
         </div>
 
     </div>
 </div>
-<!-- Footer -->
-<div class="container">
-
-</div>
 
 </main>
+<!-- Footer -->
+<footer class="border-top w-100 position-relative bottom-0 end-0">
+    <div class="container">
+        <p class="text-center">Made by Rodney Nuñez</p>
+    </div>
+</footer>
+
 <!-- Bootstrap Scripts: Separate Popper and Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

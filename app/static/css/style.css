@@ -1,3 +1,52 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+/* Navbar */
+nav {
+    border-bottom: 1px solid white;
+}
+
+.navbar-brand {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav-link, nav .dropdown-item {
+    font-size: .9375rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Carousel */
 .carousel-item {
     background-image: url(../images/carousel_holder.jpg);
+}
+
+/* Cards */
+.card-body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    color: #2E2E2E !important;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Headers & Paragraphs */
+h3 {
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p, section a {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+section a {
+    color: cornflowerblue;
+    text-decoration: none;
 }
