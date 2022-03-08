@@ -16,8 +16,36 @@ nav {
 }
 
 /* Carousel */
-.carousel-item {
-    background-image: url(https://img.freepik.com/free-photo/gray-smooth-textured-design_53876-96061.jpg?size=626&ext=jpg&ga=GA1.2.1523936791.1639440000);
+#carousel1 {
+    background: url(../images/carousel_git.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#carousel2 {
+    background: url(../images/carousel_docker.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#carousel3 {
+    background: url(../images/carousel_flask.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#carousel4 {
+    background: url(../images/carousel_actions.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* Cards */
