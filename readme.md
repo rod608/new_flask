@@ -11,4 +11,5 @@ setup.py is a config file for pytest
 
 MY testfd
 
-Here's my testing Heroku app: https://ren9-testing.herokuapp.com/
+Here's my Development Heroku app: https://ren9-dev.herokuapp.com/
+Here's my Production Heroku app: https://ren9-prod.herokuapp.com/
