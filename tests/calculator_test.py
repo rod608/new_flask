@@ -6,7 +6,6 @@ def test_calculator_placeholder():
     Calculator.divide((2, 2))
     assert (1 + 2) == 3
 
-
 # def test_calculator_add_method():
 #     """Testing the Calculator Add"""
 #     test_tuple = (1, 1)
