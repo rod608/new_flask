@@ -2,6 +2,6 @@
 
 
 def test_request_example(client):
-    """This makes the index page"""
+    """This tests the index page"""
     response = client.get("/")
     assert b"Rod's Mods" in response.data
