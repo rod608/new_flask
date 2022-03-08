@@ -1,4 +1,4 @@
-# Imports
+""" Testing the Operations """
 from calculator.operations import Addition, Subtraction, Multiplication, Division
 
 

@@ -1,7 +1,8 @@
-from calculator.calculations import Calculation
+""" Testing the Calculations """
+# from calculator.calculations import Calculation
 
 
 # Test each operation (create), test each getResult method
 def test_placeholder():
-    Calculation.create((1, 2))
+    """ Placeholder Test """
     assert (1 + 1) == 2

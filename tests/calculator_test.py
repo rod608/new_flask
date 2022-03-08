@@ -3,6 +3,7 @@ from calculator import Calculator
 
 
 def test_calculator_placeholder():
+    """ Placeholder Test """
     Calculator.divide((2, 2))
     assert (1 + 2) == 3
 
