@@ -106,7 +106,8 @@
                 <li>If you're going to be checking for pylint later, make sure to include a Docstring at the top.</li>
                 <li>Create a function with any name that takes "client" its parameter.</li>
                 <li>Within the function, set response = client.get({page_link}).</li>
-                <li>Finally, check whether or not specific text appears on the page via assert b"Specific Words" in response.data</li>
+                <li>Check whether specific text appears on the page via assert b"Specific Words" in response.data</li>
+                <li>Finally, Check whether the site actually loads with assert response.status_code == 200</li>
             </ol>
 
     </section>
