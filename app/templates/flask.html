@@ -96,7 +96,7 @@
             <a href="https://flask.palletsprojects.com/en/2.0.x/testing/" target="_blank">Flask Documentation: Testing Applications</a>
 
             <p class="mt-3">Of course, testing Flask Web Applications defers from testing Python command-line applications. There's an
-                entirely different process, but some steps are definitely shared.
+                entirely different process, but some steps are definitely shared. Here's how I tested the pages for this project:
             </p>
 
             <p class="text-decoration-underline">How-To</p>
@@ -108,9 +108,44 @@
                 <li>Within the function, set response = client.get({page_link}).</li>
                 <li>Check whether specific text appears on the page via assert b"Specific Words" in response.data</li>
                 <li>Finally, Check whether the site actually loads with assert response.status_code == 200</li>
+                <li>Repeat as many times as there are pages. You can also have one for a page that doesn't exist, but assert response.status_code == 404</li>
             </ol>
 
+        <hr class="my-3">
     </section>
+    <!-- Blueprint/Outline -->
+    <section id="pytest">
+        <h3 class="mb-0 pb-0">This Project's File Outline</h3>
+
+            <a href="https://flask.palletsprojects.com/en/2.0.x/blueprints/" target="_blank">Flask Documentation: Blueprint</a>
+
+            <p class="mt-3">Here's a comprehensive cheatsheet on how <a href="https://github.com/rod608/new_flask" target="_blank">this project's file system</a> is set up.
+            </p>
+
+            <ul>
+                <li>new_docker_flask <-- Project Root</li>
+                <ul>
+                    <li>.github <-- Location for GitHub-Specific Files (Actions or Issue Template)</li>
+                    <ul>
+                        <li>workflows <-- .yml files for GitHub Actions reside here.</li>
+                    </ul>
+                    <li>app <-- "Root" of the Flask Application itself</li>
+                    <ul>
+                        <li>static <-- Holder for css, js, & images folders.</li>
+                        <li>templates <-- Holder for my HTML files for all pages seen here.</li>
+                        <li>__init__.py <-- Where the Flask Application itself is created.</li>
+                        <li>run.py <-- Allows Gunicorn to serve the app in production</li>
+                    </ul>
+                    <li>tests <-- Location of all tests.</li>
+                    <ul>
+                        <li>homepage_test.py <-- Tests for all pages (as seen above). Will rename this later.</li>
+                    </ul>
+                </ul>
+            </ul>
+
+        <hr class="my-3">
+    </section>
+
 </main>
 <!-- Footer -->
 <footer class="border-top w-100 position-relative bottom-0 end-0">
