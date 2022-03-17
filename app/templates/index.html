@@ -22,7 +22,7 @@
 <body>
 
 <header class="bg-dark">
-        <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark shadow">
         <div class="container-fluid">
 
@@ -50,13 +50,19 @@
                         <a href="/flask" class="nav-link">Flask</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="/cicd" class="nav-link">CICD</a>
+                    </li>
+
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Continuous I/D
+                        Articles
                       </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/cicd">Integration</a></li>
-                        <li><a class="dropdown-item" href="/cicd">Deployment</a></li>
+                      <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/oop-terms">OOP: Terms</a></li>
+                        <li><a class="dropdown-item" href="/oop-principles">OOP: Principles</a></li>
+                        <li><a class="dropdown-item" href="/solid">SOLID Principles</a></li>
+                        <li><a class="dropdown-item" href="/aaa">AAA Tests: Python</a></li>
                       </ul>
                     </li>
 
@@ -70,7 +76,7 @@
 <!-- Main Section -->
 <main class="mb-5">
     <!-- Carousel -->
-    <div class="row mb-4">
+    <section class="mb-4">
         <div id="mainCarousel" class="carousel slide carousel-dark carousel-fade" data-bs-ride="carousel">
 
             <!-- Indicators -->
@@ -114,10 +120,10 @@
               </button>
 
         </div>
-    </div>
+    </section>
 
 <!-- Cards -->
-<div class="container">
+<section class="container">
     <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-4 mb-4">
 
         <div class="col">
@@ -165,7 +171,7 @@
         </div>
 
     </div>
-</div>
+</section>
 
 </main>
 <!-- Footer -->

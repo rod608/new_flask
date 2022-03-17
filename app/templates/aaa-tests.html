@@ -15,7 +15,7 @@
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-        <title>{% block title %}Rod's Mods - {% endblock %}Continuous Integration & Deployment {{ name }}</title>
+        <title>{% block title %}Rod's Mods - {% endblock %}AAA Tests {{ name }}</title>
     {% endblock %}
 </head>
 <body>
@@ -50,18 +50,18 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="/cicd" class="nav-link active">CICD</a>
+                        <a href="/cicd" class="nav-link">CICD</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Articles
                       </a>
                       <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/oop-terms">OOP: Terms</a></li>
                         <li><a class="dropdown-item" href="/oop-principles">OOP: Principles</a></li>
                         <li><a class="dropdown-item" href="/solid">SOLID Principles</a></li>
-                        <li><a class="dropdown-item" href="/aaa">AAA Tests: Python</a></li>
+                        <li><a class="dropdown-item active" href="/aaa">AAA Tests: Python</a></li>
                       </ul>
                     </li>
 
@@ -74,42 +74,25 @@
 
 <!-- Main Section -->
 <main class="container mb-5">
-    <!-- Introduction -->
-    <section id="cicd">
-        <h3 class="mb-0 pb-0">Continuous Integration & Deployment</h3>
+    <!-- Introduction & Repositories -->
+    <section id="repos">
+        <h3 class="mb-0 pb-0">AAA Testing</h3>
 
-            <a href="https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/" target="_blank">GitHub Blog: CI/CD</a>
+            <a href="https://github.com/git-guides/#what-is-git" target="_blank">GitHub Docs: Repositories</a>
 
-            <p class="mt-3">CI/CD Is a DevOps tactic that makes use of automating. In this case, these techniques are invoked via the usage of
-                automated testing with GitHub Actions and eventual deployment to Heroku.
+            <p class="mt-3">Time to learn about Git, GitHub, & Repositories. Git is a version control software, GitHub is the company that developers make use of cloud-based Git repositories, and Repositories
+                are the storage locations for your previous software archives in your version control process (where your projects are stored)!
             </p>
 
-            <p>Continuous Integration involves the practice of merging changes to the main branch as often as possible (within reason) by running
-                automated tests onto the branch upon certain conditions. Further down the line comes Continuous Deployment, where code that happens
-                to pass all the steps/checks successfully is released to the public automatically (in this case, your Heroku app is updated).
+            <p>Alright, so what is version control? Just as it sounds, it's a safe way to save changes in your code over periods of time without having to overwrite previous versions; in case you have to go back
+                to it later on for some reason. Git counts as distributed version control, meaning each individual developer working with a repository has a copy of it; this is better as centralized as that one entails
+                the "main" project being somewhere specific. Overall, you can expect to initialize or clone a repository, add your changes, commit a snapshot of your code, and push (if you're working alone on a small project,
+                that is)!
             </p>
 
         <hr class="my-3">
     </section>
-    <!-- Development Server vs Production Server -->
-    <section id="servers">
-        <h3 class="mb-0 pb-0">GitHub Actions & Docker Images</h3>
 
-            <a href="https://github.com/features/actions" target="_blank">GitHub Actions: Features</a>
-
-            <p class="mt-3">So, I've got GitHub Actions configured in a way that allows for continuous integration and deployment. GitHub Actions looks for the
-                .yml file within the workflows directory and follows that, similarly to the way that docker looks for Dockerfiles. The first thing one does in the .yml
-                file is give it a name at the top. Afterwards, you specify the conditions for jobs to active (on push or pull requests of the master, in this case). Then,
-                you assign some jobs. In this case, I've assigned jobs for setting up Ubuntu and running tests, building the Docker containers/updating the repository, and
-                deploying to Heroku. The passwords to my Docker account and the access token for my Heroku app have been passed in as GitHub secrets. My development workflow is
-                only triggered upon a pull request, and it serves the purpose of checking if the code should be merged. It won't update a Docker repository but will deploy to the development
-                Heroku app, so one is given the chance to review the site there if needed. The production workflow is triggered upon a git push, and it both updates the associated Docker repository and
-                deploys to the production Heroku app, which is the one that "customers" would see.
-            </p>
-
-            <p></p>
-
-    </section>
 </main>
 <!-- Footer -->
 <footer class="border-top w-100 position-relative bottom-0 end-0">

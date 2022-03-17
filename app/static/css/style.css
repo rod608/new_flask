@@ -1,6 +1,10 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
+.carousel {
+    border: black 1px solid;
+}
+
 /* Navbar */
 nav {
     border-bottom: 1px solid white;

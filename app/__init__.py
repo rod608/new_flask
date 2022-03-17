@@ -27,4 +27,20 @@ def create_app():
     def cicdpage():
         return render_template('cicd.html')
 
+    @app.route("/oop-terms")
+    def termspage():
+        return render_template('oop-terms.html')
+
+    @app.route("/oop-principles")
+    def principlespage():
+        return render_template('oop-principles.html')
+
+    @app.route("/solid")
+    def solidpage():
+        return render_template('solid.html')
+
+    @app.route("/aaa")
+    def aaapage():
+        return render_template('aaa-tests.html')
+
     return app

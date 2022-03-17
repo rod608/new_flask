@@ -1,3 +1,4 @@
+"""These are reusable template function"""
 from os import getenv
 import datetime
 
@@ -9,8 +10,8 @@ def utility_text_processors():
         return getenv('FLASK_ENV', None)
 
     def current_year():
-        currentDateTime = datetime.datetime.now()
-        date = currentDateTime.date()
+        current_date_time = datetime.datetime.now()
+        date = current_date_time.date()
         year = date.strftime("%Y")
         return year
 

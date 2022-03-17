@@ -45,6 +45,34 @@ def test_request_cicd(client):
     assert b"Continuous Integration & Deployment" in response.data
 
 
+def test_request_oopt(client):
+    """This makes the oop-terms page"""
+    response = client.get("/oop-terms")
+    assert response.status_code == 200
+    assert b"OOP" in response.data
+
+
+def test_request_oppp(client):
+    """This makes the oop-principles page"""
+    response = client.get("/oop-principles")
+    assert response.status_code == 200
+    assert b"OOP" in response.data
+
+
+def test_request_solid(client):
+    """This makes the Solid Principles page"""
+    response = client.get("/solid")
+    assert response.status_code == 200
+    assert b"SOLID" in response.data
+
+
+def test_request_aaa(client):
+    """This makes the AAA Testing page"""
+    response = client.get("/aaa")
+    assert response.status_code == 200
+    assert b"AAA" in response.data
+
+
 def test_request_page_not_found(client):
     """This makes the index page"""
     response = client.get("/page5")
