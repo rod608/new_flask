@@ -1,9 +1,7 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
-
-.carousel {
-    border: black 1px solid;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
 
 /* Navbar */
 nav {
@@ -76,4 +74,27 @@ h3 {
 
 p, section a, ol li {
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Article Titles */
+.article-title {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+
+    background: -webkit-linear-gradient(#3b8d99, #aa4b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.article-subtitle {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+
+    background: -webkit-linear-gradient(#000, #456D91);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.article-data {
+    font-family: 'Playfair Display', serif;
 }
