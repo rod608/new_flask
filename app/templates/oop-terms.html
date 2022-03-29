@@ -15,14 +15,14 @@
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-        <title>{% block title %}Rod's Mods - {% endblock %}OOP Terms {{ name }}</title>
+        <title>{% block title %}Rod's Mods - {% endblock %}OOP Glossary {{ name }}</title>
     {% endblock %}
 </head>
 <body>
 <!-- Header Section -->
-<header class="sticky-top bg-dark">
+<header class="sticky-top bg-light">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark shadow mb-5">
+    <nav class="navbar navbar-expand-md navbar-light shadow mb-5">
         <div class="container-fluid">
 
             <!-- Branding & Mobile Toggler -->
@@ -60,7 +60,7 @@
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Articles
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item active" href="/oop-terms">OOP: Terms</a></li>
                             <li><a class="dropdown-item" href="/oop-principles">OOP: Principles</a></li>
                             <li><a class="dropdown-item" href="/solid">SOLID Principles</a></li>
@@ -85,7 +85,9 @@
             <section class="article-header">
 
                 <p class="article-data text-decoration-underline mb-1">Rodney Nuñez / Mar 18, 2022</p>
-                <h1 class="article-title">Object-Oriented Programming: Essential Terms</h1>
+                <h1 class="article-title">Object-Oriented Programming: Glossary</h1>
+                <a href="https://www.geeksforgeeks.org/differences-between-procedural-and-object-oriented-programming/#:~:text=In%20procedural%20programming%2C%20program%20is,programming%20follows%20bottom%20up%20approach."
+                   target="_blank">GeeksForGeeks: Procedural vs Object-Oriented Programming</a>
 
                 <hr class="my-3 shadow">
 
@@ -131,31 +133,60 @@
 
                         <div class="tab-pane fade show active" id="pills-class-definition" role="tabpanel"
                              aria-labelledby="pills-class-definition-tab">
-                            <p>When you hear the word "class" in reference to object-oriented programming, the clear
-                                image of a blueprint should come to mind.</p>
+
+                            <a href="https://brilliant.org/wiki/classes-oop/" target="_blank">Brilliant.org Article</a>
+
+                            <p>When you hear the word "class" in reference to object-oriented programming, the
+                                clear
+                                image of a blueprint should come to mind. This is due to the fact that classes
+                                serve as
+                                the blueprints for objects. In class-based languages like Java, C++, and Python,
+                                classes define things like the data attributes and the methods/functions that'll
+                                be used
+                                to manipulate said data.
+                            </p>
+                            <p>Let's take the example of a Person class. Check out the image to see how it would
+                                be
+                                declared in Java.</p>
+
                         </div>
 
                         <div class="tab-pane fade" id="pills-instance-data" role="tabpanel"
                              aria-labelledby="pills-instance-data-tab">
-                            instance data
+                            <p>Typically the first thing defined and/or instantiated within the class itself are its
+                                instance data, or attributes. For example, a Dog class might have attributes for
+                                their
+                                name, behavior, A good practice is to attach the "private" access modifier
+                                keyword to the attributes so that they can only be accessed/modified via the
+                                built-in
+                                methods; meaning they can't be changed or accessed directly. On top of this, the
+                                named
+                                for the instance data should follow camelCase or snake_case notation.
+                            </p>
+                            <p>Our Person class can have attributes for many things, but let's just go with a name
+                                and
+                                weight. The weight is in pounds and should be some sort of floating-point number,
+                                while
+                                the name should be a String.
+                            </p>
                         </div>
 
                         <div class="tab-pane fade" id="pills-constructor" role="tabpanel"
                              aria-labelledby="pills-constructor-tab">
-                            constructor
+                            <p>The constructor(s) are an essential part of classes as they define how they should be
+                                instantiated. This goes hand-in-hand with the concept of instantiation
+                            </p>
                         </div>
 
                         <div class="tab-pane fade" id="pills-methods" role="tabpanel"
                              aria-labelledby="pills-methods-tab">
-                            definition: (function within a class) (defines behavior of a class)
-                            general:
-                            static method:
+                            <p>definition: (function within a class) (defines behavior of a class)
+                                general:
+                                static method:</p>
                         </div>
 
+                        <hr class="w-75 my-4">
                     </div>
-
-                    <hr class="w-75 my-4">
-
                 </section>
                 <!-- Object Section -->
                 <section id="oop-obj" class="ps-2">
@@ -243,14 +274,26 @@
                     <!-- Principles Pill Content -->
                     <div class="tab-content" id="pills-tabContent">
 
+                        <a href="https://www.indeed.com/career-advice/career-development/what-is-object-oriented-programming"
+                           target="_blank">Indeed Article</a>
+
                         <div class="tab-pane fade show active" id="pills-oop-encapsulation" role="tabpanel"
                              aria-labelledby="pills-oop-encapsulation-tab">
-                            Encapsulation
+                            The fact that we can group related properties and the methods that perform operations on
+                            them into one unit. A class is "well-encapsulated" if its properties aren't directly
+                            accessible and can only be modified using its methods. Encapsulation ensures that the
+                            class/object code doesn't leak into the rest of the program, so it takes you one step
+                            further from spaghetti code.
                         </div>
 
                         <div class="tab-pane fade" id="pills-abstraction" role="tabpanel"
                              aria-labelledby="pills-abstraction-tab">
-                            Abstraction
+                            When some of the properties or methods of a class are purposely hidden from the outside
+                            (usually declared as private) in order to achieve a simpler interface for both the
+                            programmers and the end-user, and less of an impact when it comes to changes involving
+                            the aforementioned hidden data. It's easier to use an object with fewer properties and
+                            methods; even if using the methods is comparable to throwing information into a magic
+                            box and getting the desired result out.
                         </div>
 
                         <div class="tab-pane fade" id="pills-inheritance" role="tabpanel"

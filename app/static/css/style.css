@@ -76,17 +76,16 @@ p, section a, ol li {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* Article Titles */
-.article-title {
-    font-family: 'Fredoka', sans-serif;
-    font-weight: bold;
-
-    background: -webkit-linear-gradient(#3b8d99, #aa4b6b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Articles */
+.article-bg {
+    background: #0C262F !important;
 }
 
-.article-subtitle {
+.article-header img {
+    filter: drop-shadow(0 0 0.75rem black);
+}
+
+.article-title {
     font-family: 'Fredoka', sans-serif;
     font-weight: bold;
 
@@ -95,6 +94,24 @@ p, section a, ol li {
     -webkit-text-fill-color: transparent;
 }
 
+.article-subtitle {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+
+    background: -webkit-linear-gradient(#3b8d99, #aa4b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .article-data {
     font-family: 'Playfair Display', serif;
+}
+
+.article-body p {
+    font-size: 1rem;
+}
+
+.nav-pills .nav-item {
+    background: #2E2E2E !important;
+    color: aliceblue !important;
 }
