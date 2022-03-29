@@ -77,327 +77,135 @@
 
 <!-- Main Section -->
 <main class="container mb-5">
-    <div class="row">
 
-        <!-- Article Content -->
-        <div class="col-sm-9">
-            <!-- Article Header -->
-            <section class="article-header">
+    <!-- Article Header -->
+    <section class="article-header">
 
-                <p class="article-data text-decoration-underline mb-1">Rodney Nuñez / Mar 18, 2022</p>
-                <h1 class="article-title">Object-Oriented Programming: Glossary</h1>
-                <a href="https://www.geeksforgeeks.org/differences-between-procedural-and-object-oriented-programming/#:~:text=In%20procedural%20programming%2C%20program%20is,programming%20follows%20bottom%20up%20approach."
-                   target="_blank">GeeksForGeeks: Procedural vs Object-Oriented Programming</a>
+        <p class="article-data text-decoration-underline mb-1">Rodney Nuñez / Mar 18, 2022</p>
+        <h1 class="article-title">Object-Oriented Programming: Glossary</h1>
 
-                <hr class="my-3 shadow">
+        <hr class="my-3 shadow">
 
-            </section>
-            <!-- Article Body -->
-            <section class="article-body">
+    </section>
 
-                <!-- Class Section -->
-                <section id="oop-class" class="ps-2">
+    <!-- Class-Related Definitions -->
+    <section id="class-definitions">
+        <h3 class="mb-2 pb-0 text-decoration-underline">Class-Related Definitions</h3>
 
-                    <h2 class="article-subtitle">Class</h2>
+        <ul>
+            <li>
+                <p><strong>Class: </strong> The blueprints for objects. Properties, methods, and constructors
+                    bundled into one unit.</p>
+            </li>
+            <li>
+                <p><strong>Instance Data: </strong> The properties/characteristics of said classes.</p>
+            </li>
+            <li>
+                <p><strong>Constructors: </strong> Defines how a class is instantiated. Typically initializes or
+                    sets the properties to default values.</p>
+            </li>
+            <li>
+                <p><strong>Methods: </strong> Functions within the class that manipulate the properties or perform
+                    actions related to the class. They define the behavior of the class.</p>
+                <ul>
+                    <li><p><strong>Static Methods: </strong> Tied directly to the class; not objects. Static
+                        properties/methods can only interact with other things declared as static, and can be called
+                        just by using the class's name.</p></li>
+                </ul>
+            </li>
+        </ul>
 
-                    <!-- Class Pill List -->
-                    <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-class-definition-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-class-definition" type="button" role="tab"
-                                    aria-controls="pills-class-definition" aria-selected="true">Definition
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-instance-data-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-instance-data" type="button" role="tab"
-                                    aria-controls="pills-instance-data" aria-selected="false">Instance Data
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-constructor-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-constructor" type="button" role="tab"
-                                    aria-controls="pills-constructor" aria-selected="false">Constructor
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-methods-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-methods" type="button" role="tab"
-                                    aria-controls="pills-methods" aria-selected="false">Methods
-                            </button>
-                        </li>
-                    </ul>
+        <hr class="my-3">
+    </section>
+    <!-- Object-Related Definitions -->
+    <section id="object-definitions">
+        <h3 class="mb-2 pb-0 text-decoration-underline">Object-Related Definitions</h3>
 
-                    <!-- Class Pill Content -->
-                    <div class="tab-content" id="pills-tabContent">
+        <ul>
+            <li>
+                <p><strong>Object: </strong> An instance of the class. It has all the properties and methods defined by
+                    the class and is its own entity. </p>
+            </li>
+            <li>
+                <p><strong>Instantiation: </strong> Creating a new instance of the class, or an object. An object of a
+                    certain class is an instance of said class.</p>
+            </li>
+            <li>
+                <p><strong>Constructors: </strong> Defines how a class is instantiated. Typically initializes or
+                    sets the properties to default values.</p>
+            </li>
+            <li>
+                <p><strong>Methods: </strong> Functions within the class that manipulate the properties or perform
+                    actions related to the class. They define the behavior of the class.</p>
+            </li>
 
-                        <div class="tab-pane fade show active" id="pills-class-definition" role="tabpanel"
-                             aria-labelledby="pills-class-definition-tab">
+        </ul>
 
-                            <a href="https://brilliant.org/wiki/classes-oop/" target="_blank">Brilliant.org Article</a>
+        <hr class="my-3">
+    </section>
+    <!-- OOP Principles Definitions -->
+    <section id="oopP-definitions">
+        <h3 class="mb-2 pb-0 text-decoration-underline">The Four OOP Principles</h3>
 
-                            <p>When you hear the word "class" in reference to object-oriented programming, the
-                                clear
-                                image of a blueprint should come to mind. This is due to the fact that classes
-                                serve as
-                                the blueprints for objects. In class-based languages like Java, C++, and Python,
-                                classes define things like the data attributes and the methods/functions that'll
-                                be used
-                                to manipulate said data.
-                            </p>
-                            <p>Let's take the example of a Person class. Check out the image to see how it would
-                                be
-                                declared in Java.</p>
+        <ul>
+            <li>
+                <p><strong>Encapsulation: </strong> The fact that we can bundle properties and methods into units called
+                    classes. Each instance of the class is also its own unit. </p>
+            </li>
+            <li>
+                <p><strong>Abstraction: </strong> Purposely not showing certain properties or methods in classes in
+                    order to improve organization and ease of use. The access modifier keywords come into play here a
+                    lot. </p>
+            </li>
+            <li>
+                <p><strong>Inheritance: </strong> The process in which a subclass extends from a superclass. The child
+                    class inherits all properties and methods from the parent while having the potential to add its own.
+                    One parent can have multiple children, but children can only have one direct parent. </p>
+            </li>
+            <li>
+                <p><strong>Polymorphism: </strong> Taking many forms. Refers to the fact that different classes/objects
+                    may have methods with the same signature and yet the compiler knows which to invoke depending on the
+                    instance of said object. </p>
+            </li>
+        </ul>
 
-                        </div>
+        <hr class="my-3">
+    </section>
+    <!-- SOLID Principles Definitions -->
+    <section id="solid-definitions">
+        <h3 class="mb-2 pb-0 text-decoration-underline">The Four SOLID Principles</h3>
 
-                        <div class="tab-pane fade" id="pills-instance-data" role="tabpanel"
-                             aria-labelledby="pills-instance-data-tab">
-                            <p>Typically the first thing defined and/or instantiated within the class itself are its
-                                instance data, or attributes. For example, a Dog class might have attributes for
-                                their
-                                name, behavior, A good practice is to attach the "private" access modifier
-                                keyword to the attributes so that they can only be accessed/modified via the
-                                built-in
-                                methods; meaning they can't be changed or accessed directly. On top of this, the
-                                named
-                                for the instance data should follow camelCase or snake_case notation.
-                            </p>
-                            <p>Our Person class can have attributes for many things, but let's just go with a name
-                                and
-                                weight. The weight is in pounds and should be some sort of floating-point number,
-                                while
-                                the name should be a String.
-                            </p>
-                        </div>
+        <ul>
+            <li>
+                <p><strong>Single-Responsibility: </strong> Each class should do one thing and do it well. </p>
+            </li>
+            <li>
+                <p><strong>Open-Closed: </strong> Code should be open for extensions, but closed for impactful
+                    modifications.</p>
+            </li>
+            <li>
+                <p><strong>Liskov Substitution: </strong> In reference to Inheritance, the parent clas should be able to
+                    be substituted for the child without breaking the code. Children depend on parents. </p>
+            </li>
+            <li>
+                <p><strong>Interface Segregation: </strong> Similar to the Single-Responsibility Principle, each
+                    interface should do their own thing well. New interfaces should be created for new features. </p>
+            </li>
+            <li>
+                <p><strong>Dependency Inversion: </strong> Majorly impactful code should not be impacted by small,
+                    feature-like code. Dependency should be split by having both be derived from one abstraction. </p>
+            </li>
+        </ul>
 
-                        <div class="tab-pane fade" id="pills-constructor" role="tabpanel"
-                             aria-labelledby="pills-constructor-tab">
-                            <p>The constructor(s) are an essential part of classes as they define how they should be
-                                instantiated. This goes hand-in-hand with the concept of instantiation
-                            </p>
-                        </div>
+    </section>
 
-                        <div class="tab-pane fade" id="pills-methods" role="tabpanel"
-                             aria-labelledby="pills-methods-tab">
-                            <p>definition: (function within a class) (defines behavior of a class)
-                                general:
-                                static method:</p>
-                        </div>
-
-                        <hr class="w-75 my-4">
-                    </div>
-                </section>
-                <!-- Object Section -->
-                <section id="oop-obj" class="ps-2">
-
-                    <h2 class="article-subtitle">Object</h2>
-
-                    <!-- Object Pill List -->
-                    <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-obj-definition-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-obj-definition" type="button" role="tab"
-                                    aria-controls="pills-obj-definition" aria-selected="true">Definition
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-instantiation-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-instantiation" type="button" role="tab"
-                                    aria-controls="pills-instantiation" aria-selected="false">Instantiation
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-constructor-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-constructor" type="button" role="tab"
-                                    aria-controls="pills-constructor" aria-selected="false">Constructor
-                            </button>
-                        </li>
-                    </ul>
-
-                    <!-- Object Pill Content -->
-                    <div class="tab-content" id="pills-tabContent">
-
-                        <div class="tab-pane fade show active" id="pills-obj-definition" role="tabpanel"
-                             aria-labelledby="pills-obj-definition-tab">
-                            obj definition
-                        </div>
-
-                        <div class="tab-pane fade" id="pills-instantiation" role="tabpanel"
-                             aria-labelledby="pills-instantiation-tab">
-                            instantiation
-                        </div>
-
-                        <div class="tab-pane fade" id="pills-constructor" role="tabpanel"
-                             aria-labelledby="pills-constructor-tab">
-                            cry
-                        </div>
-
-                    </div>
-
-                    <hr class="w-75 my-4">
-
-                </section>
-                <!-- Principles Section -->
-                <section id="principles-section" class="ps-2">
-
-                    <h2 class="article-subtitle">OOP Principles</h2>
-
-                    <!-- Principles Pill List -->
-                    <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-oop-encapsulation-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-oop-encapsulation" type="button" role="tab"
-                                    aria-controls="pills-oop-encapsulation" aria-selected="true">Encapsulation
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-abstraction-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-abstraction" type="button" role="tab"
-                                    aria-controls="pills-abstraction" aria-selected="false">Abstraction
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-inheritance-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-inheritance" type="button" role="tab"
-                                    aria-controls="pills-inheritance" aria-selected="false">Inheritance
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-polymorphism-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-polymorphism" type="button" role="tab"
-                                    aria-controls="pills-polymorphism" aria-selected="false">Polymorphism
-                            </button>
-                        </li>
-                    </ul>
-
-                    <!-- Principles Pill Content -->
-                    <div class="tab-content" id="pills-tabContent">
-
-                        <a href="https://www.indeed.com/career-advice/career-development/what-is-object-oriented-programming"
-                           target="_blank">Indeed Article</a>
-
-                        <div class="tab-pane fade show active" id="pills-oop-encapsulation" role="tabpanel"
-                             aria-labelledby="pills-oop-encapsulation-tab">
-                            The fact that we can group related properties and the methods that perform operations on
-                            them into one unit. A class is "well-encapsulated" if its properties aren't directly
-                            accessible and can only be modified using its methods. Encapsulation ensures that the
-                            class/object code doesn't leak into the rest of the program, so it takes you one step
-                            further from spaghetti code.
-                        </div>
-
-                        <div class="tab-pane fade" id="pills-abstraction" role="tabpanel"
-                             aria-labelledby="pills-abstraction-tab">
-                            When some of the properties or methods of a class are purposely hidden from the outside
-                            (usually declared as private) in order to achieve a simpler interface for both the
-                            programmers and the end-user, and less of an impact when it comes to changes involving
-                            the aforementioned hidden data. It's easier to use an object with fewer properties and
-                            methods; even if using the methods is comparable to throwing information into a magic
-                            box and getting the desired result out.
-                        </div>
-
-                        <div class="tab-pane fade" id="pills-inheritance" role="tabpanel"
-                             aria-labelledby="pills-inheritance-tab">
-                            Inheritance
-                        </div>
-
-                        <div class="tab-pane fade" id="pills-polymorphism" role="tabpanel"
-                             aria-labelledby="pills-polymorphism-tab">
-                            Polymorphism
-                        </div>
-
-                    </div>
-
-                    <hr class="w-75 my-4">
-
-                </section>
-                <!-- Next Section -->
-                <section id="general-terms-section" class="ps-2">
-
-                    <h2 class="article-subtitle">General Terms</h2>
-
-                    <!-- Principles Pill List -->
-                    <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-static-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-static" type="button" role="tab"
-                                    aria-controls="pills-static" aria-selected="true">Static
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-ut-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-ut" type="button" role="tab"
-                                    aria-controls="pills-ut" aria-selected="false">Unit Test
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-fixture-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-fixture" type="button" role="tab"
-                                    aria-controls="pills-fixture" aria-selected="false">Fixture
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-type-hint-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-type-hint" type="button" role="tab"
-                                    aria-controls="pills-type-hint" aria-selected="false">Type Hint
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-type-cast-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-type-cast" type="button" role="tab"
-                                    aria-controls="pills-type-cast" aria-selected="false">Type Cast
-                            </button>
-                        </li>
-                    </ul>
-
-                    <!-- Principles Pill Content -->
-                    <div class="tab-content" id="pills-tabContent">
-
-                        <div class="tab-pane fade show active" id="pills-static" role="tabpanel"
-                             aria-labelledby="pills-static-tab">
-                            Static Definition (keyword, methods, instance data)
-                        </div>
-
-                        <div class="tab-pane fade" id="pills-ut" role="tabpanel"
-                             aria-labelledby="pills-ut-tab">
-                            Unit Tests Definition
-                        </div>
-
-                        <div class="tab-pane fade" id="pills-fixture" role="tabpanel"
-                             aria-labelledby="pills-fixture-tab">
-                            Fixture Definition
-                        </div>
-
-                        <div class="tab-pane fade" id="pills-type-hint" role="tabpanel"
-                             aria-labelledby="pills-type-hint-tab">
-                            Type Hint Definition
-                        </div>
-
-                        <div class="tab-pane fade" id="pills-type-cast" role="tabpanel"
-                             aria-labelledby="pills-type-cast-tab">
-                            Type Cast Definition
-                        </div>
-
-                    </div>
-
-                    <hr class="w-75 my-4">
-
-                </section>
-
-            </section>
-        </div>
-        <!-- Article Navigation -->
-        <div class="col-sm">
-            <h5>Quick Navigation</h5>
-            <ul class="list-group">
-                <li class="list-group-item"><a href="#oop-class">Class</a></li>
-                <li class="list-group-item">Type Cast</li>
-            </ul>
-        </div>
-
-    </div>
 </main>
-
+<!-- Footer -->
+<footer class="border-top w-100 position-relative bottom-0 end-0">
+    <div class="container">
+        <p class="text-center">Made by Rodney Nuñez</p>
+    </div>
+</footer>
 <!-- Bootstrap Scripts: Separate Popper and Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

@@ -131,7 +131,13 @@
                 last. This principle states that completed classes should be open for extension but not for
                 modification, as you don't want to drastically change how it behaves. This means that adding some sort
                 of new feature is allowed as long as it follows the principles and isn't changing any functional
-                behaviors.</p>
+                behaviors. The code is open to additional functionality but closed to major shifts. With that being
+                said, let's take the example of the code being shown below. If I wanted to
+                implement some sort of new feature within that specific method, I have to do so in a way that doesn't
+                touch or logically change that code, as that method is essential in creating objects for the factory
+                mentioned earlier. A new feature that easily comes to mind is adding some sort of check to ensure that
+                the values being passed as the tuple_list argument are actually numbers, as this adds functionality
+                without taking any away.</p>
 
             <img src="../static/images/articles/oopP_3.png" alt="Calculator Class (history)"
                  class="img-fluid rounded shadow w-50 mb-2">
@@ -145,26 +151,19 @@
             <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#liskov-substitution-principle"
                target="_blank">Digital Ocean: Definition</a>
 
-            <p class="mt-3">Object-Oriented Programming represents real-world relations better than any spaghetti code
-                ever could. Classes like the aforementioned Calculator class have properties and methods; just like the
-                ones in real life. Well, the principle that is Inheritance plays a big role in solidifying the
-                real-world aspects of object-oriented programming by introducing tied relationships. As the name
-                suggests, Inheritance allows for one class to inherit from another. The "child" class inherits all the
-                properties and methods from the parent class and adds its own, meaning the child is dependent on the
-                parent. For example, it would make sense to have a Yorkie class extend a Dog class, seeing as though
-                Yorkies share many similarities with other dogs but throw their own characteristics and classiness into
-                the mix. Let's see if we can find an example of this within the Calculator code:
-                tuple() method that's used within the
-                calculator code as an example: </p>
+            <p class="mt-3">The Liskov Substitution principle extends on the Open-Closed Principle and takes aspects of
+                Inheritance into account. This principle focuses more on the behavior of a superclass (parent) and its
+                children, stating that parent objects should be replaceable with their children without breaking the
+                application. As stated in the Inheritance section, child classes should depend on their parent; not the
+                other way around. To get into specifics, this means that overridden methods within the child class
+                should have the same method signature and behave on a strictness-level comparable to that of the parent
+                or the program may throw an exception when dealing with the parent and its children. As seen below, the
+                Calculator parent class has a function that returns the argument converted to a tuple of floats. If the
+                Addition, Subtraction, or other subclasses wanted to modify it, they should do so in a way that doesn't
+                compromise its original usage as that is how you'd follow th principle of Liskov Substitution.</p>
 
-            <img src="../static/images/articles/oopP_4.png" alt="Calculator Class (history)"
+            <img src="../static/images/articles/solid_2.png" alt="Calculator Class"
                  class="img-fluid rounded shadow w-50 mb-2">
-
-            <p>Though it is an abstract class, we can see the parent class Calculation and the factory method it uses to
-                push out children. Calculation can't be instantiated as it is abstract, but it's children will have
-                access to that constructor that is seen there for instantiation as well as any properties/methods that
-                it may have. This parent class can have multiple children, but the children can only have one parent.
-            </p>
 
             <hr class="my-3">
         </section>
@@ -175,16 +174,16 @@
             <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#interface-segregation-principle"
                target="_blank">Digital Ocean: Definition</a>
 
-            <p class="mt-3">Polymorphism is synonymous for having multiple forms. Let's say that you had two classes
-                that had methods with identical header signatures but with different behaviors: Putting them into some
-                sort of array and calling that method should return the correct operation for each of those objects.
-                This is due to the fact that the compiler knows exactly where to call it from, meaning this ties in
-                nicely with the concept that is Encapsulation. Let's see if we can find an example of this within the
-                Calculator code:
-                tuple() method that's used within the
-                calculator code as an example: </p>
+            <p class="mt-3">The Interface Segregation Principle is similar to the principle of Single Responsibility in
+                the sense that it is meant to reduce widespread issues and enforce organization by separating code by
+                function and features. However, this principle is specific to Interfaces and states that overpopulating
+                or adding more and more to one interface whenever a new feature is requested is bad practice as it leads
+                to a mess and polluting the original interface; it's better to create a new one bearing the new
+                functionality. Although the image below more accurately describes the Single-Responsibility Principle as
+                the add method in the Calculator class makes use of methods from other classes with very specific
+                purposes, you can imagine how it would be for this principle based on that. </p>
 
-            <img src="../static/images/articles/oopP_5.png" alt="Calculator Class"
+            <img src="../static/images/articles/solid_3.png" alt="Calculator Class"
                  class="img-fluid rounded shadow w-50 mb-2">
 
             <p>The image above shows two separate classes, Multiplication and Subtraction, that have a method named
@@ -193,6 +192,27 @@
                 be able to discern which getResult() is being called depending on which class the object being used to
                 access the method is an instance of.
             </p>
+
+            <hr class="my-3">
+        </section>
+        <!-- Dependency Inversion -->
+        <section id="dependency-inversion">
+            <h3 class="mb-0 pb-0">Dependency Inversion</h3>
+
+            <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#dependency-inversion-principle"
+               target="_blank">Digital Ocean: Definition</a>
+
+            <p class="mt-3">The idea of the Dependency Inversion principle is not a hard one to grasp as any programmer
+                who has dipped theirs toes in Object-Oriented Programming has done this; at least unintentionally. This
+                principle states that the High-Level modules in the code that provide abstract logic should not be
+                impacted by later created low-level modules that include new features. In order to do this, you (and the
+                low/high-level modules) depend on abstractions in order to split their dependence; hence the name of the
+                principle. Below you'll find an example of an abstract base class that dependencies may be based on. One
+                sees that any class that is a child of Calculation has the functionality of instantiating itself a
+                certain way, so that should not change in either the high or low level implementations.</p>
+
+            <img src="../static/images/articles/oopP_4.png" alt="Calculator Class"
+                 class="img-fluid rounded shadow w-50 mb-2">
 
         </section>
 
